@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ivory: #FAF9F6;
+  --color-ivory-light: #FFFFFF;
+  --color-ivory-dark: #EAE6DF;
+  --color-royal-brown: #5C4A3D;
+  --color-royal-brown-light: #7E6B5D;
+  --color-royal-brown-dark: #3A2F28;
+  --color-luxury-gold: #C5A059;
+  --color-luxury-gold-light: #E4D4B5;
+
+  --color-background: var(--color-ivory);
+  --color-foreground: var(--color-royal-brown);
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+@layer base {
+  body {
+    @apply bg-ivory text-royal-brown font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Smooth Scrolling styles for Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-royal-brown-light);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-royal-brown);
+}
