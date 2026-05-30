@@ -1,4 +1,85 @@
-"use client";
+import React from 'react';
+import StatCard from '@/components/admin/StatCard';
+import { Users, BookOpen, GraduationCap, DollarSign } from 'lucide-react';
+
+export default function AdminHomePage() {
+  const [userName, setUserName] = React.useState('Admin');
+
+  // ... existing useEffect omitted for brevity
+
+  return (
+    <div className="space-y-6 animate-fade-in-up">
+      <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#8B7355]/10 bg-gradient-to-br from-white to-[#FDFBF7]">
+        <h2 className="text-3xl font-serif font-bold text-[#4A3B32]">
+          Welcome back, {userName}!
+        </h2>
+        <p className="mt-2 text-[#8B7355]">
+          This is your central dashboard for managing the Senthil Public School website.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StatCard
+          title="Total Students"
+          value="1,245"
+          icon={<Users size={24} />}
+          colorClass="bg-luxury-gold/10"
+        />
+        <StatCard
+          title="Faculty Members"
+          value="86"
+          icon={<BookOpen size={24} />}
+          colorClass="bg-luxury-gold/10"
+        />
+        <StatCard
+          title="New Admissions"
+          value="32"
+          icon={<GraduationCap size={24} />}
+          colorClass="bg-luxury-gold/10"
+        />
+        <StatCard
+          title="Revenue Focus"
+          value="Growth"
+          icon={<DollarSign size={24} />}
+          colorClass="bg-luxury-gold/10"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#8B7355]/10 h-64 flex items-center justify-center">
+          <p className="text-[#8B7355]/50">Analytics Chart Placeholder</p>
+        </div>
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#8B7355]/10 h-64 flex flex-col">
+          <h3 className="font-bold text-lg text-[#4A3B32] border-b border-[#8B7355]/10 pb-4 mb-4">Recent Activity</h3>
+          <ul className="space-y-4 overflow-y-auto flex-1">
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 mt-2 rounded-full bg-[#D4AF37]"></div>
+              <div>
+                <p className="text-sm font-medium text-[#4A3B32]">System Admin logged in</p>
+                <p className="text-xs text-[#8B7355]">Just now</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 mt-2 rounded-full bg-[#D4AF37]"></div>
+              <div>
+                <p className="text-sm font-medium text-[#4A3B32]">New admission inquiry received</p>
+                <p className="text-xs text-[#8B7355]">2 hours ago</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 mt-2 rounded-full bg-[#D4AF37]"></div>
+              <div>
+                <p className="text-sm font-medium text-[#4A3B32]">Gallery updated with "Sports Day" photos</p>
+                <p className="text-xs text-[#8B7355]">Yesterday</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
