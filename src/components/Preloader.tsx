@@ -52,18 +52,18 @@ export default function Preloader() {
             >
               <Image
                 src="/logo.png"
-                alt="Senthil Public School"
+                alt="SPS"
                 fill
                 className="object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]"
                 priority
               />
-              <motion.div 
+              <motion.div
                 animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.3, 0.1] }}
                 transition={{ duration: 3, repeat: Infinity }}
                 className="absolute inset-0 bg-luxury-gold/20 blur-3xl rounded-full -z-10"
               />
             </motion.div>
-            
+
             <motion.div className="overflow-hidden h-10 flex items-center">
               <motion.span
                 initial={{ y: 40 }}
@@ -83,8 +83,8 @@ export default function Preloader() {
                 className="absolute top-0 left-0 h-full bg-luxury-gold shadow-[0_0_15px_rgba(212,175,55,0.8)]"
               />
             </div>
-            
-            <motion.span 
+
+            <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
