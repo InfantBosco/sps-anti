@@ -36,15 +36,15 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.8 }}
-              className="bg-ivory p-8 rounded-2xl shadow-sm border border-royal-brown/5 relative"
+              className="bg-ivory p-8 rounded-2xl shadow-md hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)] hover:border-luxury-gold/30 border border-royal-brown/5 relative transition-all duration-500 group"
             >
-              <Quote className="text-luxury-gold/20 w-16 h-16 absolute top-6 right-6" />
+              <Quote className="text-luxury-gold/20 w-16 h-16 absolute top-6 right-6 group-hover:text-luxury-gold/30 transition-colors duration-500" />
               <div className="relative z-10">
                 <p className="text-royal-brown-light/90 italic leading-relaxed mb-8">
                   "{item.quote}"
                 </p>
                 <div>
-                  <h4 className="font-serif font-bold text-royal-brown">{item.author}</h4>
+                  <h4 className="font-serif font-bold text-royal-brown group-hover:text-luxury-gold transition-colors duration-300">{item.author}</h4>
                   <p className="text-xs text-luxury-gold uppercase tracking-wider font-semibold mt-1">{item.role}</p>
                 </div>
               </div>

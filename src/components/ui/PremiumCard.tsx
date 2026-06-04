@@ -44,7 +44,7 @@ export default function PremiumCard({
       className="h-full"
     >
       <TiltCard className="h-full block">
-        <div className="group relative bg-ivory-light rounded-2xl overflow-hidden border border-royal-brown/5 shadow-sm hover:shadow-xl transition-all duration-500 h-full flex flex-col">
+        <div className="group relative bg-ivory-light rounded-2xl overflow-hidden border border-royal-brown/5 shadow-lg hover:shadow-[0_20px_60px_rgba(212,175,55,0.15)] hover:border-luxury-gold/40 transition-all duration-500 h-full flex flex-col">
           {imageSrc && (
             <div className="relative h-64 w-full overflow-hidden shrink-0">
               <Image
@@ -62,7 +62,7 @@ export default function PremiumCard({
           
           <div className={`p-8 flex flex-col flex-grow ${imageSrc ? 'pt-8' : 'pt-12'}`}>
             {icon && (
-              <div className="w-14 h-14 rounded-full bg-luxury-gold/10 flex items-center justify-center text-luxury-gold mb-6 group-hover:bg-luxury-gold group-hover:text-ivory transition-colors duration-500 shrink-0">
+              <div className="w-14 h-14 rounded-full bg-luxury-gold/10 flex items-center justify-center text-luxury-gold mb-6 group-hover:bg-luxury-gold/20 group-hover:shadow-lg group-hover:shadow-luxury-gold/20 transition-all duration-500 shrink-0">
                 {icon}
               </div>
             )}

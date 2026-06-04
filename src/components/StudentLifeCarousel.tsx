@@ -44,7 +44,7 @@ export default function StudentLifeCarousel() {
             {activities.map((item) => (
               <Link href={item.href} key={item.id}>
                 <motion.div 
-                  className="min-w-[300px] md:min-w-[450px] h-[400px] md:h-[500px] relative rounded-2xl overflow-hidden group shadow-xl"
+                  className="min-w-[300px] md:min-w-[450px] h-[400px] md:h-[500px] relative rounded-2xl overflow-hidden group shadow-xl hover:shadow-[0_25px_60px_rgba(212,175,55,0.15)] border border-luxury-gold/10 hover:border-luxury-gold/40 transition-all duration-500"
                 >
                   <RoyalImageEffect 
                     src={item.src} 

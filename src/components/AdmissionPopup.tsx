@@ -66,7 +66,7 @@ export default function AdmissionPopup() {
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             className="fixed bottom-8 right-8 z-[100] w-[320px] md:w-[380px]"
           >
-            <div className="bg-royal-brown-dark border border-luxury-gold/30 rounded-3xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl relative overflow-hidden group">
+            <div className="bg-royal-brown-dark border border-luxury-gold/30 rounded-3xl p-8 shadow-[0_25px_60px_rgba(212,175,55,0.2)] hover:shadow-[0_30px_70px_rgba(212,175,55,0.25)] backdrop-blur-xl relative overflow-hidden group transition-all duration-500">
               {/* Background Decorative Glow */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-luxury-gold/10 blur-[60px] rounded-full group-hover:bg-luxury-gold/20 transition-all duration-700" />
               

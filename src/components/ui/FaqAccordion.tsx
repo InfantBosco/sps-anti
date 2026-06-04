@@ -40,17 +40,17 @@ export default function FaqAccordion() {
       {faqs.map((faq, index) => (
         <div 
           key={index} 
-          className={`border rounded-xl overflow-hidden transition-colors duration-300 ${openIndex === index ? 'border-luxury-gold bg-white shadow-md' : 'border-royal-brown/10 bg-ivory-light'}`}
+          className={`border rounded-xl overflow-hidden transition-all duration-300 ${openIndex === index ? 'border-luxury-gold bg-white shadow-lg shadow-luxury-gold/10' : 'border-royal-brown/10 bg-ivory-light shadow-sm hover:shadow-md hover:border-luxury-gold/20'}`}
         >
           <button
             onClick={() => toggleAccordion(index)}
             className="w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none"
           >
-            <span className={`font-serif font-bold text-lg ${openIndex === index ? 'text-luxury-gold' : 'text-royal-brown'}`}>
+            <span className={`font-serif font-bold text-lg transition-colors duration-300 ${openIndex === index ? 'text-luxury-gold' : 'text-royal-brown'}`}>
               {faq.question}
             </span>
             <ChevronDown 
-              className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-luxury-gold' : 'text-royal-brown/50'}`} 
+              className={`transform transition-all duration-300 ${openIndex === index ? 'rotate-180 text-luxury-gold' : 'text-royal-brown/50'}`} 
             />
           </button>
           <AnimatePresence>

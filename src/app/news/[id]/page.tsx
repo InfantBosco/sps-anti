@@ -99,7 +99,7 @@ export default function EventDetailPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-8 bg-white rounded-2xl border border-royal-brown/5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group"
+                  className="p-8 bg-white rounded-2xl border border-royal-brown/5 shadow-md hover:shadow-[0_20px_50px_rgba(212,175,55,0.1)] hover:border-luxury-gold/30 transition-all duration-500 relative overflow-hidden group"
                 >
                   <div className="absolute top-0 left-0 w-1 h-full bg-luxury-gold transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-500" />
                   <span className="text-luxury-gold font-serif text-4xl opacity-20 absolute top-4 right-6">0{i+1}</span>

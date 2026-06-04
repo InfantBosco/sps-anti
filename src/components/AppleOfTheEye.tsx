@@ -75,7 +75,7 @@ export default function AppleOfTheEye() {
                 flex: activeId === feature.id ? 5 : 1,
               }}
               transition={{ duration: 0.15, ease: "easeOut" }}
-              className={`relative rounded-[2.5rem] overflow-hidden cursor-pointer border border-luxury-gold/10 transition-all duration-500 ${activeId === feature.id ? 'bg-ivory/5 backdrop-blur-xl border-luxury-gold/30 shadow-2xl' : 'bg-transparent hover:border-luxury-gold/20'}`}
+              className={`relative rounded-[2.5rem] overflow-hidden cursor-pointer border transition-all duration-500 ${activeId === feature.id ? 'bg-ivory/5 backdrop-blur-xl border-luxury-gold/40 shadow-[0_25px_60px_rgba(212,175,55,0.2)]' : 'border-luxury-gold/10 bg-transparent hover:border-luxury-gold/30 hover:shadow-lg hover:shadow-luxury-gold/10'}`}
             >
               <div className="absolute inset-0 p-10 md:p-14 flex flex-col justify-between">
                 

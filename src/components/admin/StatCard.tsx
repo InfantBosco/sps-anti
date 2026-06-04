@@ -9,7 +9,7 @@ interface StatCardProps {
 
 export default function StatCard({ title, value, icon, colorClass = 'bg-luxury-gold/10' }: StatCardProps) {
   return (
-    <div className={`flex items-center gap-4 p-4 rounded-2xl shadow-sm border border-[#8B7355]/10 ${colorClass}`}>
+    <div className={`flex items-center gap-4 p-4 rounded-2xl shadow-md hover:shadow-lg border border-[#8B7355]/10 hover:border-luxury-gold/30 transition-all duration-500 ${colorClass}`}>
       <div className="flex-shrink-0 text-royal-brown-dark">
         {icon}
       </div>

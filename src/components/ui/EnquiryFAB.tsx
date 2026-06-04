@@ -16,7 +16,7 @@ export default function EnquiryFAB() {
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="absolute bottom-20 right-0 w-72 md:w-80 bg-white rounded-3xl shadow-2xl border border-luxury-gold/20 overflow-hidden"
+            className="absolute bottom-20 right-0 w-72 md:w-80 bg-white rounded-3xl shadow-[0_25px_60px_rgba(0,0,0,0.15)] border border-luxury-gold/30 overflow-hidden hover:shadow-[0_30px_70px_rgba(212,175,55,0.2)] transition-shadow duration-500"
           >
             <div className="bg-royal-brown-dark p-6 text-ivory relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-luxury-gold/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />

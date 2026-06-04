@@ -110,9 +110,9 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-ivory/5 p-10 md:p-14 rounded-3xl border border-luxury-gold/20 backdrop-blur-sm group hover:border-luxury-gold transition-colors duration-500"
+              className="bg-ivory/5 p-10 md:p-14 rounded-3xl border border-luxury-gold/20 hover:border-luxury-gold/50 shadow-lg hover:shadow-[0_25px_60px_rgba(212,175,55,0.15)] backdrop-blur-sm group transition-all duration-500"
             >
-              <div className="w-16 h-16 rounded-2xl bg-luxury-gold/10 flex items-center justify-center text-luxury-gold mb-10 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 rounded-2xl bg-luxury-gold/10 flex items-center justify-center text-luxury-gold mb-10 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-luxury-gold/30 transition-all">
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -129,9 +129,9 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-ivory/5 p-10 md:p-14 rounded-3xl border border-luxury-gold/20 backdrop-blur-sm group hover:border-luxury-gold transition-colors duration-500"
+              className="bg-ivory/5 p-10 md:p-14 rounded-3xl border border-luxury-gold/20 hover:border-luxury-gold/50 shadow-lg hover:shadow-[0_25px_60px_rgba(212,175,55,0.15)] backdrop-blur-sm group transition-all duration-500"
             >
-              <div className="w-16 h-16 rounded-2xl bg-luxury-gold/10 flex items-center justify-center text-luxury-gold mb-10 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 rounded-2xl bg-luxury-gold/10 flex items-center justify-center text-luxury-gold mb-10 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-luxury-gold/30 transition-all">
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
@@ -158,12 +158,12 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-10 bg-white rounded-3xl border border-royal-brown/5 shadow-sm hover:shadow-xl transition-all duration-500 text-center group"
+                className="p-10 bg-white rounded-3xl border border-royal-brown/5 shadow-md hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)] hover:border-luxury-gold/30 transition-all duration-500 text-center group"
               >
-                <div className="w-14 h-14 rounded-2xl bg-luxury-gold/10 flex items-center justify-center mx-auto mb-8 group-hover:bg-luxury-gold group-hover:text-ivory transition-colors">
+                <div className="w-14 h-14 rounded-2xl bg-luxury-gold/10 flex items-center justify-center mx-auto mb-8 group-hover:bg-luxury-gold group-hover:text-ivory group-hover:shadow-lg group-hover:shadow-luxury-gold/30 transition-all duration-500">
                   {value.icon}
                 </div>
-                <h4 className="font-serif text-2xl font-bold text-royal-brown mb-4">{value.title}</h4>
+                <h4 className="font-serif text-2xl font-bold text-royal-brown mb-4 group-hover:text-luxury-gold transition-colors duration-300">{value.title}</h4>
                 <p className="text-royal-brown-light/70 text-sm leading-relaxed">
                   {value.desc}
                 </p>
@@ -212,25 +212,25 @@ export default function AboutPage() {
             
             <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="space-y-4 pt-12">
-                <div className="relative h-64 rounded-3xl overflow-hidden shadow-lg">
-                  <Image src="/royal-sports.png" alt="Sports" fill className="object-cover" />
+                <div className="relative h-64 rounded-3xl overflow-hidden shadow-xl hover:shadow-[0_25px_60px_rgba(212,175,55,0.15)] transition-shadow duration-500 group cursor-pointer border border-luxury-gold/10 hover:border-luxury-gold/30">
+                  <Image src="/royal-sports.png" alt="Sports" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 to-black/40" />
                 </div>
-                <div className="relative h-48 rounded-3xl overflow-hidden shadow-lg">
-                  <Image src="/royal-library.png" alt="Library" fill className="object-cover" />
+                <div className="relative h-48 rounded-3xl overflow-hidden shadow-xl hover:shadow-[0_25px_60px_rgba(212,175,55,0.15)] transition-shadow duration-500 group cursor-pointer border border-luxury-gold/10 hover:border-luxury-gold/30">
+                  <Image src="/royal-library.png" alt="Library" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 to-black/40" />
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="relative h-48 rounded-3xl overflow-hidden shadow-lg">
-                  <Image src="/royal-auditorium.png" alt="Auditorium" fill className="object-cover" />
+                <div className="relative h-48 rounded-3xl overflow-hidden shadow-xl hover:shadow-[0_25px_60px_rgba(212,175,55,0.15)] transition-shadow duration-500 group cursor-pointer border border-luxury-gold/10 hover:border-luxury-gold/30">
+                  <Image src="/royal-auditorium.png" alt="Auditorium" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 to-black/40" />
                 </div>
-                <div className="relative h-64 rounded-3xl overflow-hidden shadow-lg">
-                  <Image src="/royal-students.png" alt="Students" fill className="object-cover" />
+                <div className="relative h-64 rounded-3xl overflow-hidden shadow-xl hover:shadow-[0_25px_60px_rgba(212,175,55,0.15)] transition-shadow duration-500 group cursor-pointer border border-luxury-gold/10 hover:border-luxury-gold/30">
+                  <Image src="/royal-students.png" alt="Students" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 to-black/40" />
                 </div>

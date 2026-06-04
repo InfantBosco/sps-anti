@@ -105,7 +105,7 @@ export default function MultiStepForm() {
   }
 
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-royal-brown/10">
+    <div className="w-full max-w-4xl mx-auto bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] hover:shadow-[0_30px_80px_rgba(212,175,55,0.1)] overflow-hidden border border-royal-brown/10 hover:border-luxury-gold/20 transition-all duration-500">
       <div className="flex flex-col md:flex-row">
         
         {/* Sidebar Progress */}

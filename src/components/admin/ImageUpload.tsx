@@ -46,7 +46,7 @@ export default function ImageUpload({ onUpload, value, label }: ImageUploadProps
       
       <div className="relative group">
         {value ? (
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-royal-brown/10 shadow-lg">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-royal-brown/10 shadow-lg hover:shadow-[0_20px_50px_rgba(212,175,55,0.1)] hover:border-luxury-gold/30 transition-all duration-500">
             <Image src={value} alt="Uploaded" fill className="object-cover" />
             <button 
               onClick={() => onUpload("")}
@@ -56,13 +56,13 @@ export default function ImageUpload({ onUpload, value, label }: ImageUploadProps
             </button>
           </div>
         ) : (
-          <label className="flex flex-col items-center justify-center w-full aspect-video bg-ivory border-2 border-dashed border-royal-brown/10 rounded-2xl cursor-pointer hover:border-luxury-gold/50 hover:bg-white transition-all group">
+          <label className="flex flex-col items-center justify-center w-full aspect-video bg-ivory border-2 border-dashed border-royal-brown/10 rounded-2xl cursor-pointer hover:border-luxury-gold/50 hover:bg-white hover:shadow-md transition-all group">
             <div className="flex flex-col items-center justify-center pt-5 pb-6">
               {loading ? (
                 <Loader2 className="animate-spin text-luxury-gold mb-4" size={40} />
               ) : (
                 <>
-                  <div className="w-16 h-16 bg-luxury-gold/10 rounded-2xl flex items-center justify-center text-luxury-gold mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-luxury-gold/10 rounded-2xl flex items-center justify-center text-luxury-gold mb-4 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-luxury-gold/20 transition-all">
                     <Upload size={32} />
                   </div>
                   <p className="text-sm text-royal-brown font-bold mb-1">Upload Photo</p>
