@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
+import AnimatedNavLink from "./ui/AnimatedNavLink";
+import AnimatedButton from "./ui/AnimatedButton";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -56,13 +58,20 @@ function MobileNavItem({ link, setMobileMenuOpen }: { link: any, setMobileMenuOp
   if (link.dropdown) {
     return (
       <div className="flex flex-col">
-        <button 
+        <motion.button 
           onClick={() => setIsOpen(!isOpen)}
           className="flex items-center justify-between font-serif text-2xl text-royal-brown hover:text-luxury-gold transition-colors py-3 w-full text-left"
+          whileHover={{ x: 4 }}
+          transition={{ duration: 0.2 }}
         >
           {link.name}
-          <ChevronDown className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180 text-luxury-gold' : ''}`} />
-        </button>
+          <motion.div
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ChevronDown className="text-luxury-gold" />
+          </motion.div>
+        </motion.button>
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -72,14 +81,19 @@ function MobileNavItem({ link, setMobileMenuOpen }: { link: any, setMobileMenuOp
               className="overflow-hidden pl-6 flex flex-col gap-3 mt-2 border-l-2 border-luxury-gold/30"
             >
               {link.dropdown.map((sublink: any) => (
-                <Link
+                <motion.div
                   key={sublink.name}
-                  href={sublink.href}
-                  className="font-serif text-lg text-royal-brown-light hover:text-luxury-gold transition-colors block py-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  {sublink.name}
-                </Link>
+                  <Link
+                    href={sublink.href}
+                    className="font-serif text-lg text-royal-brown-light hover:text-luxury-gold transition-colors block py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {sublink.name}
+                  </Link>
+                </motion.div>
               ))}
             </motion.div>
           )}
@@ -89,15 +103,20 @@ function MobileNavItem({ link, setMobileMenuOpen }: { link: any, setMobileMenuOp
   }
 
   return (
-    <Link
-      href={link.href}
-      target={link.name === "Mandatory Disclosure" ? "_blank" : undefined}
-      rel={link.name === "Mandatory Disclosure" ? "noopener noreferrer" : undefined}
-      className="font-serif text-2xl text-royal-brown hover:text-luxury-gold transition-colors block py-3"
-      onClick={() => setMobileMenuOpen(false)}
+    <motion.div
+      whileHover={{ x: 4 }}
+      transition={{ duration: 0.2 }}
     >
-      {link.name}
-    </Link>
+      <Link
+        href={link.href}
+        target={link.name === "Mandatory Disclosure" ? "_blank" : undefined}
+        rel={link.name === "Mandatory Disclosure" ? "noopener noreferrer" : undefined}
+        className="font-serif text-2xl text-royal-brown hover:text-luxury-gold transition-colors block py-3"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        {link.name}
+      </Link>
+    </motion.div>
   );
 }
 
@@ -166,38 +185,61 @@ export default function Navbar() {
               <Magnetic key={link.name} strength={0.2}>
                 <div className="relative group px-2">
                   {link.href ? (
-                    <Link
+                    <AnimatedNavLink
                       href={link.href}
                       target={link.name === "Mandatory Disclosure" ? "_blank" : undefined}
                       rel={link.name === "Mandatory Disclosure" ? "noopener noreferrer" : undefined}
-                      className={`text-[13px] font-bold uppercase tracking-widest transition-all duration-300 hover:text-luxury-gold py-4 flex items-center gap-1 relative ${navTextColor}`}
+                      className={`text-[13px] font-bold uppercase tracking-widest py-4 flex items-center gap-1 relative ${navTextColor}`}
                     >
                       {link.name}
-                      <span className="absolute bottom-3 left-0 w-0 h-[1px] bg-luxury-gold transition-all duration-300 group-hover:w-full" />
-                    </Link>
+                    </AnimatedNavLink>
                   ) : (
-                    <div className={`cursor-pointer text-[13px] font-bold uppercase tracking-widest transition-all duration-300 hover:text-luxury-gold py-4 flex items-center gap-1 relative ${navTextColor}`}>
+                    <motion.div
+                      className={`cursor-pointer text-[13px] font-bold uppercase tracking-widest py-4 flex items-center gap-1 relative ${navTextColor}`}
+                      whileHover={{ color: "var(--color-luxury-gold)" }}
+                    >
                       {link.name}
-                      <ChevronDown size={12} className="group-hover:rotate-180 transition-transform duration-500" />
-                      <span className="absolute bottom-3 left-0 w-0 h-[1px] bg-luxury-gold transition-all duration-300 group-hover:w-full" />
-                    </div>
+                      <motion.div
+                        initial={{ rotate: 0 }}
+                        whileHover={{ rotate: 180 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <ChevronDown size={12} />
+                      </motion.div>
+                    </motion.div>
                   )}
 
                   {link.dropdown && (
-                    <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 z-50">
+                    <motion.div
+                      className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-50"
+                      initial={{ opacity: 0, y: 16 }}
+                      whileHover={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
                       <div className="bg-ivory/95 backdrop-blur-2xl border border-luxury-gold/20 shadow-2xl rounded-2xl overflow-hidden min-w-[260px] flex flex-col py-3">
                         {link.dropdown.map((sublink) => (
-                          <Link
+                          <motion.div
                             key={sublink.name}
-                            href={sublink.href}
-                            className="px-6 py-3 text-[13px] font-semibold text-royal-brown hover:bg-luxury-gold hover:text-ivory transition-all duration-300 flex items-center justify-between group/sub"
+                            whileHover={{ x: 4, backgroundColor: "var(--color-luxury-gold)" }}
+                            transition={{ duration: 0.2 }}
+                            className="px-6 py-3"
                           >
-                            {sublink.name}
-                            <div className="w-0 h-[1px] bg-ivory transition-all duration-300 group-hover/sub:w-4" />
-                          </Link>
+                            <Link
+                              href={sublink.href}
+                              className="text-[13px] font-semibold text-royal-brown hover:text-ivory transition-colors duration-300 flex items-center justify-between group/sub"
+                            >
+                              {sublink.name}
+                              <motion.div
+                                initial={{ width: 0 }}
+                                whileHover={{ width: 16 }}
+                                transition={{ duration: 0.2 }}
+                                className="h-[1px] bg-ivory"
+                              />
+                            </Link>
+                          </motion.div>
                         ))}
                       </div>
-                    </div>
+                    </motion.div>
                   )}
                 </div>
               </Magnetic>
@@ -208,15 +250,22 @@ export default function Navbar() {
           <div className="hidden xl:block ml-4">
             <Link href="/admissions">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-500 ${
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.92 }}
+                className={`px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-500 relative overflow-hidden group ${
                   isNavSolid 
-                    ? "bg-royal-brown text-ivory hover:bg-luxury-gold shadow-lg shadow-royal-brown/20" 
-                    : "bg-ivory/20 backdrop-blur-md text-ivory border border-ivory/30 hover:bg-ivory hover:text-royal-brown"
+                    ? "bg-royal-brown text-ivory shadow-lg shadow-royal-brown/20" 
+                    : "bg-ivory/20 backdrop-blur-md text-ivory border border-ivory/30"
                 }`}
               >
-                Enroll Now
+                {/* Gold underline animation */}
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileHover={{ width: "100%" }}
+                  transition={{ duration: 0.4 }}
+                  className={`absolute bottom-0 left-0 h-[2px] ${isNavSolid ? "bg-luxury-gold" : "bg-ivory"}`}
+                />
+                <span className="relative z-10">Enroll Now</span>
               </motion.button>
             </Link>
           </div>
@@ -277,9 +326,20 @@ export default function Navbar() {
               </div>
               <div className="p-8 border-t border-luxury-gold/10 bg-ivory-dark/30">
                 <Link href="/admissions" onClick={() => setMobileMenuOpen(false)}>
-                  <button className="w-full py-4 bg-royal-brown text-ivory font-bold uppercase tracking-widest rounded-xl hover:bg-luxury-gold transition-all">
-                    Admissions 2026-27
-                  </button>
+                  <motion.button
+                    whileHover={{ scale: 1.02, x: 4 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full py-4 bg-royal-brown text-ivory font-bold uppercase tracking-widest rounded-xl relative overflow-hidden group"
+                  >
+                    {/* Gold underline */}
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileHover={{ width: "100%" }}
+                      transition={{ duration: 0.4 }}
+                      className="absolute bottom-0 left-0 h-[2px] bg-luxury-gold"
+                    />
+                    <span className="relative z-10">Admissions 2026-27</span>
+                  </motion.button>
                 </Link>
               </div>
             </motion.div>
