@@ -6,6 +6,7 @@ import Preloader from "@/components/Preloader";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackButton from "@/components/ui/BackButton";
+import SubtleAmbient from "@/components/SubtleAmbient";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,9 +36,10 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col selection:bg-luxury-gold selection:text-royal-brown-dark">
+        <SubtleAmbient />
         <Preloader />
         <SmoothScrolling>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen relative z-10">
             <Navbar />
             <div className="flex-1">
               {children}
