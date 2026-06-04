@@ -10,6 +10,8 @@ export default function ReachUsPage() {
       {/* Header */}
       <section className="relative pt-40 pb-20 bg-royal-brown-dark text-ivory overflow-hidden min-h-[40vh] flex flex-col justify-center">
         <div className="absolute inset-0 bg-[url('/infra-bg.png')] bg-cover bg-center opacity-10 mix-blend-luminosity" />
+        {/* Gradient Overlay - Ivory to transparent */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-royal-brown-dark via-transparent to-royal-brown-dark/80" />
         <div className="container mx-auto px-6 md:px-12 text-center relative z-10">
           <motion.div

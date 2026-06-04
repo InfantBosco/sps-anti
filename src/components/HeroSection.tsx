@@ -60,8 +60,12 @@ export default function HeroSection() {
               priority
               className="object-cover"
             />
-            {/* Elegant Overlays */}
+            {/* Enhanced Gradient Overlays */}
+            {/* Ivory to transparent gradient for depth */}
+            <div className="absolute inset-0 bg-gradient-to-b from-ivory/15 via-transparent to-transparent" />
+            {/* Primary dark overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-royal-brown-dark/60 via-transparent to-royal-brown-dark/80" />
+            {/* Subtle mix-blend for additional depth */}
             <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
           </motion.div>
         </AnimatePresence>

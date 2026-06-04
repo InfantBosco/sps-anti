@@ -124,6 +124,8 @@ export default function ResultsPage() {
       {/* Header & Stats Hero */}
       <section className="relative pt-40 pb-32 bg-royal-brown-dark text-ivory overflow-hidden">
         <div className="absolute inset-0 bg-[url('/about-bg.png')] bg-cover bg-center opacity-10 mix-blend-luminosity" />
+        {/* Gradient Overlay - Ivory to transparent */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-royal-brown-dark/80 to-royal-brown-dark" />
         
         {/* Floating glow effects */}
@@ -267,6 +269,8 @@ export default function ResultsPage() {
       {/* Hall of Fame - Asymmetrical Grid */}
       <section className="py-32 bg-royal-brown-dark text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/achievement.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
+        {/* Gradient Overlay - Ivory to transparent */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 via-transparent to-transparent" />
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="text-center mb-20">

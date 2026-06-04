@@ -47,13 +47,16 @@ export default function PremiumCard({
         <div className="group relative bg-ivory-light rounded-2xl overflow-hidden border border-royal-brown/5 shadow-sm hover:shadow-xl transition-all duration-500 h-full flex flex-col">
           {imageSrc && (
             <div className="relative h-64 w-full overflow-hidden shrink-0">
-              <div className="absolute inset-0 bg-royal-brown/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
               <Image
                 src={imageSrc}
                 alt={title}
                 fill
                 className="object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
               />
+              {/* Gradient Overlay - Ivory to transparent */}
+              <div className="absolute inset-0 bg-gradient-to-b from-ivory/15 via-transparent to-transparent z-5 pointer-events-none" />
+              {/* Subtle overlay effect */}
+              <div className="absolute inset-0 bg-royal-brown/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
             </div>
           )}
           

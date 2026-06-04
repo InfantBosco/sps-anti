@@ -67,6 +67,10 @@ export default function ParallaxImage({ src, alt, className = "" }: ParallaxImag
           className="object-cover transition-transform duration-500 group-hover:scale-110"
           unoptimized
         />
+        
+        {/* Gradient Overlay - Ivory to Transparent */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory/20 via-transparent to-transparent z-5 pointer-events-none" />
+        
         {/* Shine effect */}
         <motion.div 
            style={{

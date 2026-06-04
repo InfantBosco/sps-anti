@@ -70,13 +70,16 @@ export default function InfrastructureSection() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="order-1 lg:order-2 relative h-[500px] lg:h-[700px] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(197,160,89,0.15)]"
           >
-            <div className="absolute inset-0 bg-luxury-gold/10 mix-blend-overlay z-10" />
             <Image
               src="/royal-auditorium.png"
               alt="School Auditorium"
               fill
               className="object-cover transition-transform duration-1000 ease-out hover:scale-105"
             />
+            {/* Gradient Overlay - Ivory to transparent top, with blend */}
+            <div className="absolute inset-0 bg-gradient-to-b from-ivory/15 via-transparent to-transparent z-5 pointer-events-none" />
+            {/* Additional subtle overlay for depth */}
+            <div className="absolute inset-0 bg-luxury-gold/10 mix-blend-overlay z-10" />
           </motion.div>
 
         </div>

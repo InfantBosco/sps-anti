@@ -21,6 +21,8 @@ export default function PrincipalMessage() {
                   fill 
                   className="object-cover"
                 />
+                {/* Gradient Overlay - Ivory to transparent */}
+                <div className="absolute inset-0 bg-gradient-to-b from-ivory/15 via-transparent to-transparent" />
               </div>
             </ImageReveal>
             {/* Decorative element */}

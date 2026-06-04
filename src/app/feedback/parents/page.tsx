@@ -147,6 +147,9 @@ export default function ParentsFeedbackPage() {
             <div className="relative aspect-video w-full bg-royal-brown-dark rounded-[4rem] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.3)] border border-luxury-gold/20 group cursor-pointer">
               <div className="absolute inset-0 bg-[url('/about-bg.png')] bg-cover bg-center opacity-30 mix-blend-overlay scale-110 group-hover:scale-100 transition-transform duration-1000" />
               
+              {/* Gradient Overlay - Ivory to transparent */}
+              <div className="absolute inset-0 bg-gradient-to-b from-ivory/15 via-transparent to-transparent z-5 pointer-events-none" />
+              
               <div className="absolute inset-0 bg-gradient-to-t from-royal-brown-dark via-transparent to-transparent opacity-80" />
               
               <div className="relative z-10 h-full flex flex-col items-center justify-center">

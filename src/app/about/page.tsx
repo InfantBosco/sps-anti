@@ -36,6 +36,9 @@ export default function AboutPage() {
       <section className="relative pt-40 pb-20 bg-royal-brown-dark text-ivory overflow-hidden min-h-[40vh] flex flex-col justify-center">
         <div className="absolute inset-0 opacity-20">
           <Image src="/about-bg.png" alt="About Senthil" fill className="object-cover" />
+          {/* Gradient Overlay - Ivory to transparent */}
+          <div className="absolute inset-0 bg-gradient-to-b from-ivory/15 via-transparent to-transparent" />
+          {/* Primary overlay */}
           <div className="absolute inset-0 bg-royal-brown-dark/80 mix-blend-multiply"></div>
         </div>
         <div className="container mx-auto px-6 md:px-12 text-center relative z-10">
@@ -70,11 +73,8 @@ export default function AboutPage() {
               className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl"
             >
               <Image src="/principal.png" alt="Founders" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-8 left-8 text-white">
-                <p className="font-serif text-xl font-bold">Our Foundation</p>
-                <p className="text-sm opacity-80 uppercase tracking-widest mt-1">Established 2016</p>
-              </div>
+              {/* Gradient Overlay - Ivory to transparent top, dark bottom */}
+              <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 via-transparent to-black/60" />
             </motion.div>
           </div>
         </div>
@@ -214,17 +214,25 @@ export default function AboutPage() {
               <div className="space-y-4 pt-12">
                 <div className="relative h-64 rounded-3xl overflow-hidden shadow-lg">
                   <Image src="/royal-sports.png" alt="Sports" fill className="object-cover" />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 to-black/40" />
                 </div>
                 <div className="relative h-48 rounded-3xl overflow-hidden shadow-lg">
                   <Image src="/royal-library.png" alt="Library" fill className="object-cover" />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 to-black/40" />
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="relative h-48 rounded-3xl overflow-hidden shadow-lg">
                   <Image src="/royal-auditorium.png" alt="Auditorium" fill className="object-cover" />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 to-black/40" />
                 </div>
                 <div className="relative h-64 rounded-3xl overflow-hidden shadow-lg">
                   <Image src="/royal-students.png" alt="Students" fill className="object-cover" />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 to-black/40" />
                 </div>
               </div>
             </div>
