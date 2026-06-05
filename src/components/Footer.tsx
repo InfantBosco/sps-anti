@@ -147,6 +147,13 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-luxury-gold transition-colors">Terms of Service</Link>
           </div>
         </div>
+
+        {/* Minimal Credits Section */}
+        <div className="mt-8 pt-6 border-t border-royal-brown/30 text-center">
+          <p className="text-[11px] text-ivory-dark/40 tracking-wide font-light">
+            Crafted with <span className="text-luxury-gold">⬥</span> Design & Development by <span className="text-luxury-gold/70">Kiro</span>
+          </p>
+        </div>
       </div>
     </footer>
   );
