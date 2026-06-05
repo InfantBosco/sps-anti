@@ -163,13 +163,6 @@ export default function Navbar() {
                 priority
                 unoptimized
               />
-              {isHomePage && (
-                <motion.div 
-                  animate={{ scale: [1, 1.2, 1], opacity: [0.6, 1, 0.6] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute -bottom-1 -right-1 w-2 h-2 bg-luxury-gold rounded-full"
-                />
-              )}
               <motion.div 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
