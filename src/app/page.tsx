@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import DailyQuote from "@/components/DailyQuote";
 import EventCountdown from "@/components/EventCountdown";
+import QuickStatsToggle from "@/components/QuickStatsToggle";
 import PrincipalMessage from "@/components/PrincipalMessage";
 import AcademicsSection from "@/components/AcademicsSection";
 import AppleOfTheEye from "@/components/AppleOfTheEye";
@@ -18,6 +19,7 @@ export default function Home() {
             <HeroSection />
       <DailyQuote />
       <EventCountdown />
+      <QuickStatsToggle />
       <AboutSection />
       <PrincipalMessage />
       <AppleOfTheEye />
