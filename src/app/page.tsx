@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import DailyQuote from "@/components/DailyQuote";
 import PrincipalMessage from "@/components/PrincipalMessage";
 import AcademicsSection from "@/components/AcademicsSection";
 import AppleOfTheEye from "@/components/AppleOfTheEye";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
             <HeroSection />
+      <DailyQuote />
       <AboutSection />
       <PrincipalMessage />
       <AppleOfTheEye />
